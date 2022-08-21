@@ -39,7 +39,7 @@ export default function Home({ projects }) {
 }
 
 // get the projects from the database
-export async function getServerSideProps(context) {
+export async function getStaticProps() {
   const projects = [
     {
       title: "Toffy - Tournament Organizer",

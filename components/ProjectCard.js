@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Button } from "react-bootstrap";
+
 import { BsGithub } from "react-icons/bs";
 
 export default function ProjectCard({
@@ -46,41 +48,51 @@ export default function ProjectCard({
       >
         {desc}
       </div>
-      <div
-        onClick={() => {
-          window.open(github, "_blank");
-        }}
-        className="d-flex flex-row justify-content-center align-center pt-2 pb-2 mt-5"
-        style={{
-          ...(github ? {} : { visibility: "hidden" }),
-          background: "linear-gradient(90deg, #6A85B6 0%, #BAC8E0 100%)",
-          borderRadius: 5,
-          width: 160,
-          height: 40,
-          fontWeight: "700",
-          cursor: "pointer",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <BsGithub size={24} className="me-2" />
-        View Source
+      <div className="mt-5">
+        <Button
+          className="d-flex flex-row justify-content-center align-center"
+          disabled={!github}
+          onClick={() => {
+            if (github) window.open(github, "_blank");
+          }}
+          size="md"
+          style={{
+            ...(github
+              ? { cursor: "pointer" }
+              : {
+                  cursor: "not-allowed",
+                  opacity: 0.1,
+                }),
+            background: "linear-gradient(90deg, #6A85B6 0%, #BAC8E0 100%)",
+            borderRadius: 5,
+            width: 160,
+            height: 40,
+            fontWeight: "700",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+            border: "none",
+          }}
+        >
+          <BsGithub size={24} className="me-2" />
+          View Source
+        </Button>
       </div>
-      <div
-        onClick={() => {
-          window.open(live, "_blank");
-        }}
-        className="mt-4"
-        style={{
-          ...(live ? {} : { visibility: "hidden" }),
-          fontWeight: "500",
-          textDecoration: "underline",
-          color: "#868686",
-          cursor: "pointer",
-        }}
-      >
-        View Project...
+
+      <div className="mt-4">
+        <Button
+          disabled={!live}
+          onClick={() => {
+            if (live) window.open(live, "_blank");
+          }}
+          variant={`outline-${live ? "light" : "dark"}`}
+          size="sm"
+          style={{
+            fontWeight: "700",
+          }}
+        >
+          View Project...
+        </Button>
       </div>
     </div>
   );

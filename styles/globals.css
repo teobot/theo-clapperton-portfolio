@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;1,300&display=swap");
+
 html,
 body {
   padding: 0;
@@ -19,8 +21,80 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: #0E111A;
   }
+}
+
+.header {
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+}
+
+.main-text {
+  font-size: calc(32px + 5vw);
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.titillium-text {
+  /* font-family: "Titillium Web", sans-serif; */
+}
+
+.sub-text {
+  font-size: calc(28px + 2vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.lead-text {
+  font-size: calc(16px + 0.2vw);
+  font-weight: 300;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.h-50px {
+  height: 50px;
+}
+
+.w-50px {
+  width: 50px;
+}
+
+.h-15px {
+  height: 15px;
+}
+
+.w-15px {
+  width: 15px;
+}
+
+.snippet-container {
+  font-size: 1.2rem;
+}
+
+.code-container>div {
+  display: flex;
+  flex-direction: row;
+}
+
+.property>div,
+.spacer>div {
+  padding-right: 8px;
+  font-family: Hack, monospace;
+}
+
+.property .value {
+  padding: 0px
+}
+
+.text-success2 {
+  color: #9fca56;
 }

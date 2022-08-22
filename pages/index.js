@@ -1,16 +1,134 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { differenceInYears } from "date-fns";
+
+import { Container, Row, Col, Nav, Button } from "react-bootstrap";
+
+import { BsGithub } from "react-icons/bs";
+import { AiFillMail } from "react-icons/ai";
 
 import Header from "../components/Header";
 import ProjectCard from "../components/ProjectCard";
 
-import styles from "../styles/Home.module.css";
-
-export default function Home({ projects }) {
+export default function Home({ projects, details }) {
   return (
-    <Container>
+    <Container className="mt-5 mb-5">
+      <Container className="d-flex flex-row justify-content-evenly align-items-center">
+        <Button
+          disabled
+          style={{ width: 100 }}
+          size="sm"
+          variant="outline-light"
+        >
+          Full Stack
+        </Button>
+        <div className="text-center">
+          <h1>Hi, I'm Theo</h1>
+          <small className="text-secondary">
+            Software Developer at Timpson
+          </small>
+        </div>
+        <Button
+          disabled
+          style={{ width: 100 }}
+          size="sm"
+          variant="outline-light"
+        >
+          Creator
+        </Button>
+      </Container>
+
+      <Container className="mt-5 mb-5 d-flex justify-content-center">
+        <div className="bg-dark p-3">
+          <div className="d-flex flex-row mb-3">
+            <div className="circle bg-success h-15px w-15px me-2" />
+            <div className="circle bg-warning h-15px w-15px me-2" />
+            <div className="circle bg-danger h-15px w-15px" />
+          </div>
+          <div className="snippet-container">
+            <div className="d-flex flex-row spacer property">
+              <div className="text-warning">class</div>
+              <div className="text-info">Me</div>
+              <div>{`{`}</div>
+            </div>
+            <div className="code-container ps-4">
+              <div className="property">
+                <div className="visability text-warning">public</div>
+                <div className="type text-success2">string</div>
+                <div className="name text-info">Name</div>
+                <div className="equals text-success2">=</div>
+                <div className="value text-info">{`"${details.name}"`}</div>
+                <div className="end">;</div>
+              </div>
+
+              <div className="property">
+                <div className="visability text-warning">public</div>
+                <div className="type text-success2">int</div>
+                <div className="name text-info">Level</div>
+                <div className="equals text-success2">=</div>
+                <div className="value text-danger">
+                  {differenceInYears(new Date(), new Date(details.bday))}
+                </div>
+                <div className="end">;</div>
+              </div>
+
+              <div className="property">
+                <div className="visability text-warning">public</div>
+                <div className="type text-success2">string</div>
+                <div className="name text-info">Company</div>
+                <div className="equals text-success2">=</div>
+                <div className="value text-info">{`"${details.company}"`}</div>
+                <div className="end">;</div>
+              </div>
+
+              <div className="property">
+                <div className="visability text-warning">public</div>
+                <div className="type text-success2">Job</div>
+                <div className="name text-info">myJob</div>
+                <div className="equals text-success2">=</div>
+                <div className="d-flex flex-row spacer value">
+                  <div className="text-warning">new</div>
+                  <div className="text-info p-0">{`Job("${details.job}")`}</div>
+                </div>
+                <div className="end">;</div>
+              </div>
+            </div>
+            <div className="d-flex flex-row spacer property">
+              <div>{`}`}</div>
+            </div>
+          </div>
+        </div>
+      </Container>
+
+      <Container className="text-center d-flex justify-content-evenly align-items-center pt-4">
+        <Button
+          target="_blank"
+          href="https://github.com/teobot"
+          style={{ width: 125 }}
+          variant="outline-light"
+          className="d-flex align-items-center justify-content-center"
+        >
+          <BsGithub size={20} className="me-2" /> Github
+        </Button>
+        <p className="lead text-light">
+          I'm a software developer with a passion for creating software that
+          solve problems,
+          <br />
+          I'm currently working at Timpson as a full-stack software developer.
+        </p>
+        <Button
+          target="_blank"
+          href="mailto:theoclapperton@outlook.com"
+          style={{ width: 125 }}
+          variant="outline-light"
+          className="d-flex align-items-center justify-content-center"
+        >
+          <AiFillMail size={20} className="me-2" /> Contact
+        </Button>
+      </Container>
+
+      <div className="m-5 p-2" />
+
       <Container>
         <Header>i like to build</Header>
-
         <Row className="w-100 mt-4">
           {projects
             .sort((a, b) => {
@@ -168,9 +286,17 @@ export async function getStaticProps() {
     },
   ];
 
+  const details = {
+    name: "Theo Clapperton",
+    bday: "1998-02-06",
+    company: "The Timpson Group",
+    job: "Software Developer",
+  };
+
   return {
     props: {
       projects,
+      details,
     },
   };
 }

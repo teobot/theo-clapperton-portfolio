@@ -25,21 +25,19 @@ export default function ProjectCard({
         }}
       />
       <div
-        className="mt-4"
+        className="mt-4 text-light"
         style={{
           fontWeight: "700",
           fontSize: "1.5rem",
-          color: "#747474",
         }}
       >
         {title}
       </div>
       <div
-        className="mt-4 w-100"
+        className="mt-4 w-100 text-secondary"
         style={{
           fontWeight: "500",
           fontSize: "1rem",
-          color: "#747474",
           height: 100,
           maxHeight: 100,
           overflowWrap: "break-word",

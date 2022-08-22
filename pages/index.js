@@ -20,7 +20,7 @@ export default function Home({ projects, details }) {
         >
           Full Stack
         </Button>
-        <div className="text-center">
+        <div className="text-center text-light">
           <h1>Hi, I{`'`}m Theo</h1>
           <small className="text-secondary">
             Software Developer at Timpson

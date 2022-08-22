@@ -11,33 +11,41 @@ import ProjectCard from "../components/ProjectCard";
 export default function Home({ projects, details }) {
   return (
     <Container className="mt-5 mb-5">
-      <Container className="d-flex flex-row justify-content-evenly align-items-center">
-        <Button
-          disabled
-          style={{ width: 100 }}
-          size="sm"
-          variant="outline-light"
-        >
-          Full Stack
-        </Button>
-        <div className="text-center text-light">
-          <h1>Hi, I{`'`}m Theo</h1>
-          <small className="text-secondary">
-            Software Developer at Timpson
-          </small>
-        </div>
-        <Button
-          disabled
-          style={{ width: 100 }}
-          size="sm"
-          variant="outline-light"
-        >
-          Creator
-        </Button>
+      <Container>
+        <Row className="d-flex align-items-center">
+          <Col sm={12} md={4} className="text-lg-end text-center">
+            <Button
+              disabled
+              style={{ width: 100 }}
+              size="sm"
+              variant="outline-light"
+            >
+              Full Stack
+            </Button>
+          </Col>
+          <Col sm={12} md={4} className="p-4 p-sm-0">
+            <div className="text-center text-light p-1">
+              <h1>Hi, I{`'`}m Theo</h1>
+              <small className="text-secondary">
+                Software Developer at Timpson
+              </small>
+            </div>
+          </Col>
+          <Col sm={12} md={4} className="text-lg-start text-center">
+            <Button
+              disabled
+              style={{ width: 100 }}
+              size="sm"
+              variant="outline-light"
+            >
+              Creator
+            </Button>
+          </Col>
+        </Row>
       </Container>
 
       <Container className="mt-5 mb-5 d-flex justify-content-center">
-        <div className="bg-dark p-3">
+        <div className="bg-dark p-3 p-md-4">
           <div className="d-flex flex-row mb-3">
             <div className="circle bg-success h-15px w-15px me-2" />
             <div className="circle bg-warning h-15px w-15px me-2" />
@@ -98,31 +106,47 @@ export default function Home({ projects, details }) {
         </div>
       </Container>
 
-      <Container className="text-center d-flex justify-content-evenly align-items-center pt-4">
-        <Button
-          target="_blank"
-          href="https://github.com/teobot"
-          style={{ width: 125 }}
-          variant="outline-light"
-          className="d-flex align-items-center justify-content-center"
-        >
-          <BsGithub size={20} className="me-2" /> Github
-        </Button>
-        <p className="lead text-light">
-          I{`'`}m a software developer with a passion for creating software that
-          solve problems,
-          <br />I{`'`}m currently working at Timpson as a full-stack software
-          developer.
-        </p>
-        <Button
-          target="_blank"
-          href="mailto:theoclapperton@outlook.com"
-          style={{ width: 125 }}
-          variant="outline-light"
-          className="d-flex align-items-center justify-content-center"
-        >
-          <AiFillMail size={20} className="me-2" /> Contact
-        </Button>
+      <Container>
+        <Row>
+          <Col
+            sm={12}
+            md={2}
+            className="d-flex justify-content-center justify-content-sm-end align-items-center"
+          >
+            <Button
+              target="_blank"
+              href="https://github.com/teobot"
+              style={{ width: 125 }}
+              variant="outline-light"
+              className="d-flex align-items-center justify-content-center"
+            >
+              <BsGithub size={20} className="me-2" /> Github
+            </Button>
+          </Col>
+          <Col sm={12} md={8} className="text-center p-4 p-sm-0 d-flex justify-content-center align-items-center">
+            <p className="lead text-light h-100 m-0">
+              I{`'`}m a software developer with a passion for creating software
+              that solve problems,
+              <br />I{`'`}m currently working at Timpson as a full-stack
+              software developer.
+            </p>
+          </Col>
+          <Col
+            sm={12}
+            md={2}
+            className="d-flex justify-content-center justify-content-sm-start align-items-center"
+          >
+            <Button
+              target="_blank"
+              href="mailto:theoclapperton@outlook.com"
+              style={{ width: 125 }}
+              variant="outline-light"
+              className="d-flex align-items-center justify-content-center"
+            >
+              <AiFillMail size={20} className="me-2" /> Contact
+            </Button>
+          </Col>
+        </Row>
       </Container>
 
       <div className="m-5 p-2" />

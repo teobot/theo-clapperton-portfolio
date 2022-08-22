@@ -72,6 +72,25 @@ a {
   font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 427px) {
+  .snippet-container {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (min-width: 427px) {
+  .snippet-container {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .snippet-container {
+    font-size: 1.3rem;
+  }
+}
+
+
 .code-container>div {
   display: flex;
   flex-direction: row;

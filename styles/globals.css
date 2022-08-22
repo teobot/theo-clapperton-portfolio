@@ -76,17 +76,28 @@ a {
   .snippet-container {
     font-size: 0.6rem;
   }
+
+  .circle {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 @media only screen and (min-width: 427px) {
   .snippet-container {
     font-size: 1rem;
   }
+
+  .circle {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 @media only screen and (min-width: 576px) {
   .snippet-container {
     font-size: 1.3rem;
+
   }
 }
 

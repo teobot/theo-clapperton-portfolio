@@ -1,6 +1,6 @@
 import { differenceInYears } from "date-fns";
 
-import { Container, Row, Col, Nav, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 import { BsGithub } from "react-icons/bs";
 import { AiFillMail } from "react-icons/ai";
@@ -47,9 +47,9 @@ export default function Home({ projects, details }) {
       <Container className="mt-5 mb-5 d-flex justify-content-center">
         <div className="bg-dark p-3 p-md-4">
           <div className="d-flex flex-row mb-3">
-            <div className="circle bg-success h-15px w-15px me-2" />
-            <div className="circle bg-warning h-15px w-15px me-2" />
-            <div className="circle bg-danger h-15px w-15px" />
+            <div className="circle bg-danger me-2" />
+            <div className="circle bg-warning me-2" />
+            <div className="circle bg-success" />
           </div>
           <div className="snippet-container">
             <div className="d-flex flex-row spacer property">
@@ -123,7 +123,11 @@ export default function Home({ projects, details }) {
               <BsGithub size={20} className="me-2" /> Github
             </Button>
           </Col>
-          <Col sm={12} md={8} className="text-center p-4 p-sm-0 d-flex justify-content-center align-items-center">
+          <Col
+            sm={12}
+            md={8}
+            className="text-center p-4 p-sm-0 d-flex justify-content-center align-items-center"
+          >
             <p className="lead text-light h-100 m-0">
               I{`'`}m a software developer with a passion for creating software
               that solve problems,
@@ -152,7 +156,7 @@ export default function Home({ projects, details }) {
       <div className="m-5 p-2" />
 
       <Container>
-        <Header>i like to build</Header>
+        <Header>i like to build.</Header>
         <Row className="w-100 mt-4">
           {projects
             .sort((a, b) => {

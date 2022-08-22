@@ -21,7 +21,7 @@ export default function Home({ projects, details }) {
           Full Stack
         </Button>
         <div className="text-center">
-          <h1>Hi, I'm Theo</h1>
+          <h1>Hi, I{`'`}m Theo</h1>
           <small className="text-secondary">
             Software Developer at Timpson
           </small>
@@ -109,10 +109,10 @@ export default function Home({ projects, details }) {
           <BsGithub size={20} className="me-2" /> Github
         </Button>
         <p className="lead text-light">
-          I'm a software developer with a passion for creating software that
+          I{`'`}m a software developer with a passion for creating software that
           solve problems,
-          <br />
-          I'm currently working at Timpson as a full-stack software developer.
+          <br />I{`'`}m currently working at Timpson as a full-stack software
+          developer.
         </p>
         <Button
           target="_blank"

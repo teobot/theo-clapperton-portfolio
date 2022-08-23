@@ -24,6 +24,24 @@ function MyApp({ Component, pageProps }) {
           href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css"
         />
       </Head>
+
+      {process.env.NODE_ENV !== "development" && (
+        <>
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-CJBYKZ71HQ"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+          		window.dataLayer = window.dataLayer || [];
+                function gtag(){window.dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-CJBYKZ71HQ');
+            `}
+          </Script>
+        </>
+      )}
+
       <Component {...pageProps} />
     </>
   );

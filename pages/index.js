@@ -1,157 +1,21 @@
-import { differenceInYears } from "date-fns";
-
-import { Container, Row, Col, Button } from "react-bootstrap";
-
-import { BsGithub } from "react-icons/bs";
-import { AiFillMail } from "react-icons/ai";
+import { Container, Row, Col } from "react-bootstrap";
 
 import Header from "../components/Header";
 import ProjectCard from "../components/ProjectCard";
+import CodeSegment from "../components/CodeSegment";
+import PageHeader from "../components/PageHeader";
+import PageSubheader from "../components/PageSubheader";
 
 export default function Home({ projects, details }) {
   return (
     <Container className="mt-5 mb-5">
-      <Container>
-        <Row className="d-flex align-items-center">
-          <Col sm={12} md={4} className="text-lg-end text-center">
-            <Button
-              disabled
-              style={{ width: 100 }}
-              size="sm"
-              variant="outline-light"
-            >
-              Full Stack
-            </Button>
-          </Col>
-          <Col sm={12} md={4} className="p-4 p-sm-0">
-            <div className="text-center text-light p-1">
-              <h1>Hi, I{`'`}m Theo</h1>
-              <small className="text-secondary">
-                Software Developer at Timpson
-              </small>
-            </div>
-          </Col>
-          <Col sm={12} md={4} className="text-lg-start text-center">
-            <Button
-              disabled
-              style={{ width: 100 }}
-              size="sm"
-              variant="outline-light"
-            >
-              Creator
-            </Button>
-          </Col>
-        </Row>
-      </Container>
+      <PageHeader details={details} />
 
       <Container className="mt-5 mb-5 d-flex justify-content-center">
-        <div className="bg-dark p-3 p-md-4">
-          <div className="d-flex flex-row mb-3">
-            <div className="circle bg-danger me-2" />
-            <div className="circle bg-warning me-2" />
-            <div className="circle bg-success" />
-          </div>
-          <div className="snippet-container">
-            <div className="d-flex flex-row spacer property">
-              <div className="text-warning">class</div>
-              <div className="text-info">Me</div>
-              <div>{`{`}</div>
-            </div>
-            <div className="code-container ps-4">
-              <div className="property">
-                <div className="visability text-warning">public</div>
-                <div className="type text-success2">string</div>
-                <div className="name text-info">Name</div>
-                <div className="equals text-success2">=</div>
-                <div className="value text-info">{`"${details.name}"`}</div>
-                <div className="end">;</div>
-              </div>
-
-              <div className="property">
-                <div className="visability text-warning">public</div>
-                <div className="type text-success2">int</div>
-                <div className="name text-info">Level</div>
-                <div className="equals text-success2">=</div>
-                <div className="value text-danger">
-                  {differenceInYears(new Date(), new Date(details.bday))}
-                </div>
-                <div className="end">;</div>
-              </div>
-
-              <div className="property">
-                <div className="visability text-warning">public</div>
-                <div className="type text-success2">string</div>
-                <div className="name text-info">Company</div>
-                <div className="equals text-success2">=</div>
-                <div className="value text-info">{`"${details.company}"`}</div>
-                <div className="end">;</div>
-              </div>
-
-              <div className="property">
-                <div className="visability text-warning">public</div>
-                <div className="type text-success2">Job</div>
-                <div className="name text-info">myJob</div>
-                <div className="equals text-success2">=</div>
-                <div className="d-flex flex-row spacer value">
-                  <div className="text-warning">new</div>
-                  <div className="text-info p-0">{`Job("${details.job}")`}</div>
-                </div>
-                <div className="end">;</div>
-              </div>
-            </div>
-            <div className="d-flex flex-row spacer property">
-              <div>{`}`}</div>
-            </div>
-          </div>
-        </div>
+        <CodeSegment details={details} />
       </Container>
 
-      <Container>
-        <Row>
-          <Col
-            sm={12}
-            md={2}
-            className="d-flex justify-content-center justify-content-sm-end align-items-center"
-          >
-            <Button
-              target="_blank"
-              href="https://github.com/teobot"
-              style={{ width: 125 }}
-              variant="outline-light"
-              className="d-flex align-items-center justify-content-center"
-            >
-              <BsGithub size={20} className="me-2" /> Github
-            </Button>
-          </Col>
-          <Col
-            sm={12}
-            md={8}
-            className="text-center p-4 p-sm-0 d-flex justify-content-center align-items-center"
-          >
-            <p className="lead text-light h-100 m-0">
-              I{`'`}m a software developer with a passion for creating software
-              that solve problems,
-              <br />I{`'`}m currently working at Timpson as a full-stack
-              software developer.
-            </p>
-          </Col>
-          <Col
-            sm={12}
-            md={2}
-            className="d-flex justify-content-center justify-content-sm-start align-items-center"
-          >
-            <Button
-              target="_blank"
-              href="mailto:theoclapperton@outlook.com"
-              style={{ width: 125 }}
-              variant="outline-light"
-              className="d-flex align-items-center justify-content-center"
-            >
-              <AiFillMail size={20} className="me-2" /> Contact
-            </Button>
-          </Col>
-        </Row>
-      </Container>
+      <PageSubheader details={details} />
 
       <div className="m-5 p-2" />
 
@@ -187,6 +51,14 @@ export default function Home({ projects, details }) {
 // get the projects from the database
 export async function getStaticProps() {
   const projects = [
+    {
+      title: "Advent of Code",
+      desc: `I like to do coding challenges, this is a collection of my solutions.`,
+      img: "https://github.com/teobot/bucket/blob/main/portfolio/advent-of-code-min.png?raw=true",
+      live: null,
+      github: "https://github.com/teobot/advent-of-code",
+      order: 3,
+    },
     {
       title: "Toffy - Tournament Organizer",
       desc: `Toffy is a web application that allows you to create and manage tournaments.`,

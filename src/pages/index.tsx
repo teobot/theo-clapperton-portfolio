@@ -64,7 +64,7 @@ export async function getStaticProps() {
   const projects: ProjectModel[] = [
     new ProjectModel({
       title: "Northern Pride Sports Day",
-      desc: "I was commissioned to build a website for the Northern Pride Sports Day. Users can find out more information about the event and purchase tickets using a Stripe Integration.",
+      desc: "I was commissioned to build a website for the Northern Pride Sports Day. Users can find information about the event and purchase tickets using a Stripe Integration.",
       img: "https://raw.githubusercontent.com/teobot/bucket/main/portfolio/Northern%20Pride%20Sports-min.png",
       live: "https://northern-pride-sports.vercel.app/",
       github: "",

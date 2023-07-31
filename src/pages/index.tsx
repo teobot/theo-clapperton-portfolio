@@ -63,6 +63,18 @@ export default function Home({
 export async function getStaticProps() {
   const projects: ProjectModel[] = [
     new ProjectModel({
+      title: "Timpson Rapidash",
+      desc: "A project I created for sending instant messages to our thousands of branches. It uses a Node.Js server and a React.Js front end, including websocket connections for real time updates.",
+      img: "https://raw.githubusercontent.com/teobot/bucket/main/portfolio/rapidash-min.jpg",
+      order: 1,
+    }),
+    new ProjectModel({
+      title: "Timpson Ponyta",
+      desc: "A dashboard for the Timpson Rapidash project. It allows us to send announcements to our thousands of branches, and monitor branch connectivity.",
+      img: "https://raw.githubusercontent.com/teobot/bucket/main/portfolio/ponyta-min.png",
+      order: 1,
+    }),
+    new ProjectModel({
       title: "Northern Pride Sports Day",
       desc: "I was commissioned to build a website for the Northern Pride Sports Day. Users can find information about the event and purchase tickets using the Stripe API.",
       img: "https://raw.githubusercontent.com/teobot/bucket/main/portfolio/Northern%20Pride%20Sports-min.png",

@@ -63,6 +63,12 @@ export default function Home({
 export async function getStaticProps() {
   const projects: ProjectModel[] = [
     new ProjectModel({
+      title: "Viz-it",
+      desc: "Founder and lead developer for Vizit, a offline-first react native mobile app for James and John Timpson to review their stores.",
+      img: "https://raw.githubusercontent.com/teobot/bucket/main/portfolio/vizit-compressed.png",
+      order: 1,
+    }),
+    new ProjectModel({
       title: "Timpson Rapidash",
       desc: "A project I created for sending instant messages to our thousands of branches. It uses a Node.Js server and a React.Js front end, including websocket connections for real time updates.",
       img: "https://raw.githubusercontent.com/teobot/bucket/main/portfolio/rapidash-min.jpg",
@@ -80,7 +86,7 @@ export async function getStaticProps() {
       img: "https://raw.githubusercontent.com/teobot/bucket/main/portfolio/Northern%20Pride%20Sports-min.png",
       live: "https://northern-pride-sports.vercel.app/",
       github: "",
-      order: 1,
+      order: 2,
     }),
     new ProjectModel({
       title: "Advent of Code",
@@ -88,7 +94,7 @@ export async function getStaticProps() {
       img: "https://github.com/teobot/bucket/blob/main/portfolio/advent-of-code-min.png?raw=true",
       live: null,
       github: "https://github.com/teobot/advent-of-code",
-      order: 3,
+      order: 2,
     }),
     new ProjectModel({
       title: "Toffy - Tournament Organizer",
@@ -146,7 +152,7 @@ export async function getStaticProps() {
       img: "https://github.com/teobot/bucket/blob/main/portfolio/zester-min.png?raw=true",
       github: "https://github.com/teobot/zester-front-end",
       live: "https://zester.netlify.app/",
-      order: 4,
+      order: 3,
     }),
     new ProjectModel({
       title: "Pretty Screenshots",
@@ -161,7 +167,7 @@ export async function getStaticProps() {
       title: "Support System",
       desc: "Developed for use in the Timpson Development team it allows you to track tickets from phone calls and other sources.",
       img: "https://github.com/teobot/bucket/blob/main/portfolio/ticket%20support-min.png?raw=true",
-      order: 7,
+      order: 3,
     }),
     new ProjectModel({
       title: "Coffida",

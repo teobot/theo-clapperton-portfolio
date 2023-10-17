@@ -226,8 +226,8 @@ export async function getStaticProps() {
   const details = {
     name: "Theo Clapperton",
     bday: "1998-02-06",
-    company: "The Timpson Group",
-    job: "Software Developer",
+    company: "Pharmacy2U",
+    job: "Frontend Developer",
   };
 
   return {

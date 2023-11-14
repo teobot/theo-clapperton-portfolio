@@ -1,15 +1,9 @@
 import { differenceInYears } from "date-fns";
 
-export type CodeSegmentProps = {
-  details: {
-    name: string;
-    bday: string;
-    company: string;
-    job: string;
-  };
-};
+// data imports
+import details from "@/data/details";
 
-export default function CodeSegment({ details }: CodeSegmentProps) {
+export default function CodeSegment() {
   return (
     <div className="bg-dark p-3 p-md-4 rounded">
       <div className="d-flex flex-row mb-3">
@@ -29,7 +23,7 @@ export default function CodeSegment({ details }: CodeSegmentProps) {
             <div className="type text-success2">string</div>
             <div className="name text-info">Name</div>
             <div className="equals text-success2">=</div>
-            <div className="value text-info">{`"${details.name}"`}</div>
+            <div className="value text-info">{`"${details.fullName}"`}</div>
             <div className="end">;</div>
           </div>
 
@@ -49,7 +43,13 @@ export default function CodeSegment({ details }: CodeSegmentProps) {
             <div className="type text-success2">string</div>
             <div className="name text-info">Company</div>
             <div className="equals text-success2">=</div>
-            <div className="value text-info">{`"${details.company}"`}</div>
+            <div className="value text-info">
+              {`"`}
+              <a className="text-info" href={details.companyWebsite}>
+                {details.company}
+              </a>
+              {`"`}
+            </div>
             <div className="end">;</div>
           </div>
 
@@ -60,7 +60,7 @@ export default function CodeSegment({ details }: CodeSegmentProps) {
             <div className="equals text-success2">=</div>
             <div className="d-flex flex-row spacer value">
               <div className="text-warning">new</div>
-              <div className="text-info p-0">{`Job("${details.job}")`}</div>
+              <div className="text-info p-0">{`Job("${details.jobTitle}")`}</div>
             </div>
             <div className="end">;</div>
           </div>

@@ -3,6 +3,9 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { BsGithub } from "react-icons/bs";
 import { AiFillMail } from "react-icons/ai";
 
+// data
+import details from "@/data/details";
+
 export default function PageSubheader() {
   return (
     <Container>
@@ -28,10 +31,9 @@ export default function PageSubheader() {
           className="text-center p-4 p-sm-0 d-flex justify-content-center align-items-center"
         >
           <p className="lead text-light h-100 m-0">
-            I{`'`}m a software developer with a passion for creating software
-            that solve problems,
-            <br />I{`'`}m currently working at Timpson as a full-stack software
-            developer.
+            {details.subHeader},
+            <br />I{`'`}m currently working at {details.company} as a{" "}
+            {details.jobTitle}.
           </p>
         </Col>
         <Col

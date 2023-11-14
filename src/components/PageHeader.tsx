@@ -1,4 +1,8 @@
+// boostrap imports
 import { Container, Row, Col, Button } from "react-bootstrap";
+
+// data imports
+import details from "@/data/details";
 
 export default function PageHeader() {
   return (
@@ -16,9 +20,11 @@ export default function PageHeader() {
         </Col>
         <Col sm={12} md={4} className="p-4 p-sm-0">
           <div className="text-center text-light p-1">
-            <h1>Hi, I{`'`}m Theo</h1>
+            <h1>
+              Hi, I{`'`}m {details.firstName}
+            </h1>
             <small className="text-secondary">
-              Software Developer at Timpson
+              {details.jobTitle} at {details.company}
             </small>
           </div>
         </Col>

@@ -18,7 +18,7 @@ export default function ProjectCard({
       <div
         style={{
           borderRadius: 5,
-          backgroundImage: `url("${img}")`,
+          backgroundImage: `url("/images/${img}")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           aspectRatio: "18 / 6 !important",

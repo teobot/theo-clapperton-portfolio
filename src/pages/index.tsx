@@ -10,7 +10,6 @@ import PageSubheader from "@/components/PageSubheader";
 
 // data imports
 import projects from "@/data/projects";
-import details from "@/data/details";
 
 export default function Home() {
   return (

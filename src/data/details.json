@@ -1,10 +1,11 @@
 {
-  "FULL_NAME": "Theo Clapperton",
   "FIRST_NAME": "Theo",
   "LAST_NAME": "Clapperton",
   "BIRTH_DAY": "1998-02-06",
   "COMPANY": "Pharmacy2U",
   "COMPANY_WEBSITE": "https://www.pharmacy2u.co.uk/",
-  "JOB_TITLE": "Frontend Developer",
-  "SUB_HEADER": "I'm a software developer with a passion for creating software that solve problems"
+  "JOB_TITLE": "Principal Software Engineer",
+  "SUB_HEADER": "I'm a software engineer with a passion for creating software that solve problems",
+  "GITHUB": "https://github.com/teobot",
+  "EMAIL": "theoclapperton@outlook.com"
 }

@@ -37,7 +37,7 @@ export default function ProjectSection() {
   };
 
   return (
-    <div className="px-12 mt-6 lg:px-20">
+    <div className="px-4 sm:px-8 mt-6 lg:px-20">
       <div className="flex flex-col gap-3 mb-5">
         <div className="text-white text-3xl font-bold">i like to build.</div>
         <div

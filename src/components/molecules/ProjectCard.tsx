@@ -25,7 +25,7 @@ const ProjectCard: React.FC<IProject> = ({
       <p className="text-white text-2xl font-bold my-5 text-nowrap truncate">
         {title}
       </p>
-      <p className="text-slate-400 h-32 max-h-32 md:h-36 md:max-h-36 text-md line-clamp-4">
+      <p className="text-slate-400 h-32 max-h-32 md:h-36 md:max-h-36 text-md line-clamp-3 sm:line-clamp-4">
         {desc}
       </p>
       <div className="flex flex-col gap-y-5">

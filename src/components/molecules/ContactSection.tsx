@@ -1,8 +1,5 @@
 "use client";
 
-// next
-import router from "next/router";
-
 // component
 import Button from "@/components/atoms/Button";
 
@@ -10,13 +7,13 @@ import Button from "@/components/atoms/Button";
 import DATA from "@/data/details.json";
 
 export default function ContactSection() {
-  const { JOB_TITLE, COMPANY, GITHUB, SUB_HEADER } = DATA;
+  const { GITHUB, SUB_HEADER } = DATA;
   return (
     <div className="grid grid-cols-1 md:grid-cols-5 gap-y-10">
       <div className="col-span-1 flex justify-center items-center">
         <Button
           onClick={() => {
-            router.push(GITHUB);
+            window.open(GITHUB, "_blank");
           }}
           iconProp={
             <svg

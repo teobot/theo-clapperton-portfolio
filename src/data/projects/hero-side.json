@@ -1,20 +1,22 @@
 [
   {
+    "title": "Shark.Net",
+    "desc": "This is a paid commission to build a web application for the Manchester Sharks Waterpolo team website. It includes a CMS for managing Users, Blogs, Contact Messages and page content.",
+    "img": "shark.net-min.png",
+    "live": "https://www.manchester-sharks.co.uk/",
+    "rating": 1
+  },
+  {
     "title": "Viz-it",
     "desc": "Founder and lead developer for Vizit, a offline-first react native mobile app for James and John Timpson to review their stores.",
     "img": "vizit-compressed.png",
+    "live": "https://apps.apple.com/gb/app/vizit-mobile/id6468265939",
     "rating": 1
   },
   {
-    "title": "Timpson Rapidash",
+    "title": "Rapidash",
     "desc": "A project I created for sending instant messages to our thousands of branches. It uses a Node.Js server and a React.Js front end, including websocket connections for real time updates.",
     "img": "rapidash-min.jpg",
-    "rating": 1
-  },
-  {
-    "title": "Timpson Ponyta",
-    "desc": "A dashboard for the Timpson Rapidash project. It allows us to send announcements to our thousands of branches, and monitor branch connectivity.",
-    "img": "ponyta-min.png",
     "rating": 1
   }
 ]

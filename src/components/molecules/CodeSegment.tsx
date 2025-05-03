@@ -28,7 +28,7 @@ export default function CodeSegment() {
   };
 
   const WhiteText = ({ text }: { text: string }) => {
-    return <div className={`text-white ${SHARED_CSS}`}>{text}</div>;
+    return <div className={`text-black ${SHARED_CSS}`}>{text}</div>;
   };
 
   const GreenText = ({ text }: { text: string }) => {

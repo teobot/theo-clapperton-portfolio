@@ -1,5 +1,18 @@
 [
   {
+    "title": "Northern Pride Sports Day",
+    "desc": "I was commissioned to build a website for the Northern Pride Sports Day. Users can find information about the event and purchase tickets using the Stripe API.",
+    "img": "Northern%20Pride%20Sports-min.png",
+    "github": "",
+    "rating": 2
+  },
+  {
+    "title": "Ponyta",
+    "desc": "A dashboard for the Timpson Rapidash project. It allows us to send announcements to our thousands of branches, and monitor branch connectivity.",
+    "img": "ponyta-min.png",
+    "rating": 1
+  },
+  {
     "title": "Advent of Code",
     "desc": "I like to do coding challenges, this is a collection of my solutions.",
     "img": "advent-of-code-min.png",
@@ -40,28 +53,12 @@
     "hidden": true
   },
   {
-    "title": "WDrill",
-    "desc": "Placeholder",
-    "img": "wdrill-min.png",
-    "github": "https://github.com/teobot/wdrill",
-    "live": "https://wdrill.vercel.app/",
-    "hidden": true
-  },
-  {
     "title": "Zester",
     "desc": "Zester is a web application for testing system, you can create items, track progress and get updates when tests are done.",
     "img": "zester-min.png",
     "github": "https://github.com/teobot/zester-front-end",
     "live": "https://zester.netlify.app/",
     "rating": 3
-  },
-  {
-    "title": "Pretty Screenshots",
-    "desc": "A typescript app for getting pretty screenshots for README files",
-    "img": "pretytyscxen-min.png",
-    "github": "https://github.com/teobot/pretty-sceenshots",
-    "live": "https://prettier-screenshots.netlify.app/",
-    "hidden": true
   },
   {
     "title": "Support System",
@@ -83,38 +80,5 @@
     "img": "typeincat.png",
     "github": "https://github.com/teobot/typeInCat",
     "live": "https://type-in-cat.netlify.app/"
-  },
-  {
-    "title": "Train Station Finder",
-    "desc": "Produced during a 2 days Hackathon, this application allows you to find the nearest train station to your current location.",
-    "img": "train-station-app.png",
-    "github": "https://github.com/teobot/Android-Client-Server-App"
-  },
-  {
-    "title": "GameGuide",
-    "desc": "This is a computer game review website. This project uses the PHP, more specifically the framework called CodeIgniter and follows the MVC framework. It also includes a Node.Js server that allows users to chat to each other in real time.",
-    "img": "GameGuide-min.png",
-    "github": "https://github.com/teobot/GameGuide"
-  },
-  {
-    "title": "Java Web Service API",
-    "desc": "This is a web service API that implement all CRUD operations, written in Java. It showcases the use of the Java Servlet API.",
-    "img": "Javaweb-min.png",
-    "github": "https://github.com/teobot/Enterprise-Programming-Web-Service",
-    "rating": 3
-  },
-  {
-    "title": "Aircraft Scheduler",
-    "desc": "This project showcases key components of a system that can plan which plane an airline uses to fly passengers on each of their flights, and choose which pilots and cabin crew are rostered for each flight",
-    "img": "aircraftsceduler-min.png",
-    "github": "https://github.com/teobot/Airline-Scheduling-System",
-    "rating": 3
-  },
-  {
-    "title": "Pokemon Sprite Timeline",
-    "desc": "This was a fun personal projects that I undertook during my spare time. It shows the evolution of a pokemon species and their sprites.",
-    "img": "pokemonBanner.png",
-    "github": "https://github.com/teobot/pokemon-sprite-changes",
-    "live": "https://pokemon-versions.netlify.app/"
   }
 ]

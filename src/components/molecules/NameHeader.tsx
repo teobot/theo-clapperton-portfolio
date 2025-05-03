@@ -12,7 +12,7 @@ export default function NameHeader() {
         <Button title="Full Stack" className="" isDisabled={true} />
       </div>
       <div className="text-center flex flex-col gap-3 col-span-2">
-        <div className="text-4xl font-bold text-white">{`Hi, I'm ${FIRST_NAME}`}</div>
+        <div className="text-4xl font-bold text-black">{`Hi, I'm ${FIRST_NAME}`}</div>
         <div className="text-lg text-gray-50/50">{`${JOB_TITLE} at ${COMPANY}`}</div>
       </div>
       <div className="col-span-1 flex justify-center items-center">

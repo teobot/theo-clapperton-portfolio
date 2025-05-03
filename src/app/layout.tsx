@@ -8,20 +8,15 @@ import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 // data
-import {
-  FIRST_NAME,
-  LAST_NAME,
-  JOB_TITLE,
-  SUB_HEADER,
-} from "@/data/details.json";
+import data from "@/data/details.json";
 
 // font
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `${FIRST_NAME} ${LAST_NAME} | ${JOB_TITLE}`,
-  description: SUB_HEADER,
+  title: `${data.FIRST_NAME} ${data.LAST_NAME} | ${data.JOB_TITLE}`,
+  description: data.SUB_HEADER,
 };
 
 export default function RootLayout({
@@ -32,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>{children}</body>
-      <GoogleAnalytics gaId="G-CJBYKZ71HQ" />
+      <GoogleAnalytics
+        gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""}
+      />
     </html>
   );
 }

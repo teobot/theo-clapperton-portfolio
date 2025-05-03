@@ -31,8 +31,8 @@ export default function Button({
       className={twMerge(
         "font-bold flex flex-row items-center justify-center gap-2 border rounded size-fit",
         isDisabled
-          ? "opacity-25 cursor-not-allowed border-white text-white"
-          : "border-gray-500 text-gray-100 hover:bg-white hover:text-black cursor-pointer",
+          ? "opacity-25 cursor-not-allowed border-white text-black"
+          : "border-gray-500 text-black-500 hover:bg-white hover:text-black cursor-pointer",
         _size,
         className
       )}

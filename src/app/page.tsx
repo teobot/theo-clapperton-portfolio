@@ -22,29 +22,31 @@ import { useState } from "react";
 export default function Home() {
   return (
     <>
-      <div className="p-5">
+      <div className="p-5 w-full">
         <video
           src={"/assets/min.mp4"}
           autoPlay
           muted
           loop
-          className="w-full h-36 rounded-lg object-cover"
+          className="w-full h-16 sm:h-36 rounded-lg object-cover"
         />
       </div>
 
-      <div className="flex flex-col mx-auto text-center py-5">
-        <h1 className="text-xl font-medium mb-2">Hello</h1>
-        <p className="text-sm text-gray-500">
-          I am a {details.JOB_TITLE} for {details.COMPANY}.
-        </p>
+      <div className="flex flex-col items-center text-center py-5 px-1 gap-10">
+        <div className="flex flex-col gap-2">
+          <h1 className="text-xl font-medium">Hello</h1>
+          <p className="text-sm text-gray-500 text-wrap">
+            I am a {details.JOB_TITLE} for {details.COMPANY}.
+          </p>
+        </div>
 
         <SparklesText
           sparklesCount={5}
-          className="text-9xl font-bold mt-10"
+          className="text-5xl sm:text-8xl font-bold text-wrap"
           text="Theo Clapperton"
         />
 
-        <div className="flex flex-row gap-2 mx-auto mt-10">
+        <div className="flex flex-row gap-2 mx-auto">
           <a href={details.GITHUB} className="text-sm text-gray-500">
             <FaGithub />
           </a>

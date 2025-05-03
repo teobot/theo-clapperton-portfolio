@@ -16,7 +16,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: `${data.FIRST_NAME} ${data.LAST_NAME} | ${data.JOB_TITLE}`,
-  description: data.SUB_HEADER,
 };
 
 export default function RootLayout({

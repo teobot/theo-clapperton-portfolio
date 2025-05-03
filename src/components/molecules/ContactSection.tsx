@@ -7,7 +7,7 @@ import Button from "@/components/atoms/Button";
 import DATA from "@/data/details.json";
 
 export default function ContactSection() {
-  const { GITHUB, SUB_HEADER } = DATA;
+  const { GITHUB } = DATA;
   return (
     <div className="grid grid-cols-1 md:grid-cols-5 gap-y-10">
       <div className="col-span-1 flex justify-center items-center">
@@ -32,7 +32,7 @@ export default function ContactSection() {
         />
       </div>
       <div className="flex flex-col gap-4 col-span-3 px-2 md:px-0">
-        <p className="text-md text-black/75 text-center">{SUB_HEADER}</p>
+        <p className="text-md text-black/75 text-center">{}</p>
       </div>
       <div className="col-span-1 flex justify-center items-center">
         <Button

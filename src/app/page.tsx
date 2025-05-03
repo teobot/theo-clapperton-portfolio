@@ -56,8 +56,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container px-5 mx-auto w-4/5 flex flex-col gap-12 mt-60">
-        <div className="grid grid-cols-3 relative gap-10 mb-40">
+      <div className="container px-5 mx-auto w-4/5 flex flex-col gap-12 mt-32 md:mt-60">
+        <div className="grid grid-cols-1 md:grid-cols-3 relative gap-10 mb-40">
           <div className="col-span-2 relative">
             <div className="sticky top-10">
               <img
@@ -78,7 +78,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-10 gap-y-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 gap-y-20">
           {generalProjects.map((project: IProject) => (
             <ProjectCard key={project.title} {...project} />
           ))}

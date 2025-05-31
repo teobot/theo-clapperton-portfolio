@@ -7,17 +7,12 @@ import ProjectSection from "@/components/organisms/ProjectSection";
 import Hero from "@/components/molecules/Hero";
 import details from "@/data/details.json";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import getProjects from "@/utils/getProjects";
 import { IProject } from "@/common/interfaces/project.interface";
 import { SparklesText } from "@/components/ui/sparkles-text";
-import { twMerge } from "tailwind-merge";
 import ProjectCard from "@/components/molecules/ProjectCard";
-
-// Projects
-import heroProject from "@/data/projects/hero.json";
-import heroSideProject from "@/data/projects/hero-side.json";
-import generalProjects from "@/data/projects/general.json";
-import { useState } from "react";
+import ThreeColBentoGrid from "@/components/organisms/ThreeColBentoGrid";
+import projects from "@/lib/projects";
+import { twMerge } from "tailwind-merge";
 
 export default function Home() {
   return (
@@ -56,32 +51,104 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container px-5 mx-auto w-4/5 flex flex-col gap-12 mt-32 md:mt-60">
-        <div className="grid grid-cols-1 md:grid-cols-3 relative gap-10 mb-40">
-          <div className="col-span-2 relative">
-            <div className="sticky top-10">
-              <img
-                src={`/images/${heroProject.img}`}
-                alt={heroProject.title}
-                className="w-full h-auto object-cover  rounded-lg"
-              />
-              <div className="flex flex-col gap-2 mt-5">
-                <h1 className="text-4xl font-bold">{heroProject.title}</h1>
-                <p className="text-lg text-gray-500">{heroProject.desc}</p>
+      <div className="container px-5 mx-auto flex flex-col gap-12 my-32 md:my-42">
+        <div className="grid grid-cols-1 xl:grid-cols-3 relative gap-y-10 mb-40 xl:gap-x-5">
+          <div className="xl:col-span-2 relative">
+            <div className="xl:sticky xl:top-10">
+              <div className="w-full rounded-lg overflow-hidden group aspect-video">
+                <img
+                  src={`/images/${projects.heroProject.img}`}
+                  alt={projects.heroProject.title}
+                  className="w-full h-auto object-cover rounded-lg aspect-video"
+                />
+              </div>
+              <div className="flex flex-col gap-2 mt-4">
+                <h1 className="text-4xl font-bold">
+                  {projects.heroProject.title}
+                </h1>
+                <p className="text-lg text-gray-500">
+                  {projects.heroProject.desc}
+                </p>
               </div>
             </div>
           </div>
-          <div className="col-span-1 flex flex-col gap-10">
-            {heroSideProject.map((project: IProject) => (
-              <ProjectCard key={project.title} {...project} />
+          <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-1 xl:col-span-1 gap-x-5 gap-y-10">
+            {projects.heroSideProject.map((project: IProject) => (
+              <div
+                className="cursor-pointer group overflow-hidden"
+                key={project.title}
+              >
+                <div className="w-full aspect-square rounded-lg overflow-hidden group">
+                  <div
+                    className="w-full h-full transition-transform duration-300 group-hover:scale-110"
+                    style={{
+                      backgroundImage: `url("/images/${project.img}")`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1 mt-3">
+                  <h1 className="text-xl md:text-lg font-bold">
+                    {project.title}
+                  </h1>
+                  <p className="text-sm text-gray-500 hidden lg:block">
+                    {project.desc}
+                  </p>
+                  {project.live && (
+                    <a
+                      className="text-xs text-blue-500 underline mt-1"
+                      href={project.live ?? ""}
+                      target="_blank"
+                    >
+                      Read More
+                    </a>
+                  )}
+                </div>
+              </div>
             ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 gap-y-20">
-          {generalProjects.map((project: IProject) => (
-            <ProjectCard key={project.title} {...project} />
-          ))}
+        <div className="flex flex-col gap-5">
+          <div className="flex flex-row justify-between items-end">
+            <div className="text-2xl font-bold">All Projects</div>
+            <div className="text-md text-gray-500">Viewing All</div>
+          </div>
+          <div className="grid grid-cols-1 gap-5 rounded-xl">
+            {projects.generalProjects.map((project: IProject, idx: number) => (
+              <div key={project.title} className="flex items-center gap-5 ">
+                <div className="w-40 h-40 rounded-lg overflow-hidden flex-shrink-0 group">
+                  <img
+                    src={`/images/${project.img}`}
+                    alt={project.title}
+                    className={twMerge(
+                      "w-full h-full object-cover transition-transform duration-300 group-hover:scale-110",
+                      project.live && "cursor-pointer"
+                    )}
+                    onClick={() => {
+                      if (!project.live) return;
+                      window.open(project.live ?? "", "_blank");
+                    }}
+                  />
+                </div>
+                <div className="flex flex-col justify-center ">
+                  <div className="text-black font-semibold text-lg mb-2">
+                    {project.title}
+                  </div>
+                  <div className="flex gap-3 text-sm text-gray-400">
+                    <span className="font-semibold">
+                      {project.type || "Placeholder Type"}
+                    </span>
+                    <span>·</span>
+                    <span>{project.date || "Placeholder Date"}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

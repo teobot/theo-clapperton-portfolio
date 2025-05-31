@@ -4,13 +4,17 @@
     "desc": "I was commissioned to build a website for the Northern Pride Sports Day. Users can find information about the event and purchase tickets using the Stripe API.",
     "img": "Northern%20Pride%20Sports-min.png",
     "github": "",
-    "rating": 2
+    "rating": 2,
+    "type": "Client",
+    "date": "2025-05-01"
   },
   {
     "title": "Ponyta",
     "desc": "A dashboard for the Timpson Rapidash project. It allows us to send announcements to our thousands of branches, and monitor branch connectivity.",
     "img": "ponyta-min.png",
-    "rating": 1
+    "rating": 1,
+    "type": "Internal",
+    "date": "2025-05-01"
   },
   {
     "title": "Advent of Code",
@@ -18,7 +22,9 @@
     "img": "advent-of-code-min.png",
     "live": null,
     "github": "https://github.com/teobot/advent-of-code",
-    "rating": 2
+    "rating": 2,
+    "type": "Learning",
+    "date": "2025-05-01"
   },
   {
     "title": "Toffy - Tournament Organizer",
@@ -26,7 +32,9 @@
     "img": "toffyWide.png",
     "live": "https://toffy.netlify.app/",
     "github": "https://github.com/teobot/toffy",
-    "rating": 3
+    "rating": 3,
+    "type": "Personal",
+    "date": "2025-05-01"
   },
   {
     "title": "Estr",
@@ -34,7 +42,9 @@
     "img": "ester-min.png",
     "github": "https://github.com/teobot/ester-frontend",
     "live": "https://estr.netlify.app/",
-    "rating": 3
+    "rating": 3,
+    "type": "Internal",
+    "date": "2025-05-01"
   },
   {
     "title": "ACNH App",
@@ -42,7 +52,9 @@
     "img": "acnh-min.png",
     "github": "https://github.com/teobot/acnh-animal-helper",
     "live": "https://teobot-anch-priceguide.netlify.app/",
-    "hidden": true
+    "hidden": true,
+    "type": "Personal",
+    "date": "2025-05-01"
   },
   {
     "title": "2048",
@@ -50,7 +62,9 @@
     "img": "2048-min.png",
     "github": "https://github.com/teobot/2048",
     "live": "https://teobot-2048.netlify.app/",
-    "hidden": true
+    "hidden": true,
+    "type": "Game",
+    "date": "2025-05-01"
   },
   {
     "title": "Zester",
@@ -58,13 +72,17 @@
     "img": "zester-min.png",
     "github": "https://github.com/teobot/zester-front-end",
     "live": "https://zester.netlify.app/",
-    "rating": 3
+    "rating": 3,
+    "type": "Internal",
+    "date": "2025-05-01"
   },
   {
     "title": "Support System",
     "desc": "Developed for use in the Timpson Development team it allows you to track tickets from phone calls and other sources.",
     "img": "ticket%20support-min.png",
-    "rating": 3
+    "rating": 3,
+    "type": "Internal",
+    "date": "2025-05-01"
   },
   {
     "title": "Coffida",
@@ -72,13 +90,17 @@
     "img": "coffida2.png",
     "github": "https://github.com/teobot/18055445-coffida-mobile-app",
     "live": "",
-    "rating": 2
+    "rating": 2,
+    "type": "Personal",
+    "date": "2025-05-01"
   },
   {
     "title": "Type in Cat",
     "desc": "Type in Cat is a fun typography website where you can write and share your own sentences written in cats.",
     "img": "typeincat.png",
     "github": "https://github.com/teobot/typeInCat",
-    "live": "https://type-in-cat.netlify.app/"
+    "live": "https://type-in-cat.netlify.app/",
+    "type": "Personal",
+    "date": "2025-05-01"
   }
 ]

@@ -1,11 +1,13 @@
 import React from "react";
-import Image from "next/image";
 
 import { getProjectBySlug } from "@/lib/projects";
-import { IProject } from "@/common/interfaces/project.interface";
 
 export default function Page({ params }: { params: { slug: string } }) {
-  const project: IProject = getProjectBySlug(params.slug);
+  const project = getProjectBySlug(params.slug);
+
+  if (!project) {
+    return <div>Project not found</div>;
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start py-12">

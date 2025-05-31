@@ -1,10 +1,11 @@
 import heroProject from "@/data/projects/hero.json";
 import heroSideProject from "@/data/projects/hero-side.json";
 import generalProjects from "@/data/projects/general.json";
+import { IProject } from "@/common/interfaces/project.interface";
 
 const projects = { heroProject, heroSideProject, generalProjects };
 
-export const getProjectBySlug = (title: string) => {
+export const getProjectBySlug = (title: string): IProject | undefined => {
   if (title === generateProjectSlug(projects.heroProject.title)) {
     return projects.heroProject;
   }

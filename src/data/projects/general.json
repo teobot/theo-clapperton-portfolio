@@ -9,6 +9,12 @@
     "date": "2025-05-01"
   },
   {
+    "title": "Rapidash",
+    "desc": "A project I created for sending instant messages to our thousands of branches. It uses a Node.Js server and a React.Js front end, including websocket connections for real time updates.",
+    "img": "rapidash-min.jpg",
+    "rating": 1
+  },
+  {
     "title": "Ponyta",
     "desc": "A dashboard for the Timpson Rapidash project. It allows us to send announcements to our thousands of branches, and monitor branch connectivity.",
     "img": "ponyta-min.png",

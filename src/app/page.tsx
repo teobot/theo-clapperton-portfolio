@@ -69,6 +69,13 @@ export default function Home() {
                 <p className="text-lg text-gray-500">
                   {projects.heroProject.desc}
                 </p>
+                <a
+                  className="text-sm text-blue-500 underline"
+                  href={projects.heroProject.live ?? ""}
+                  target="_blank"
+                >
+                  Read More
+                </a>
               </div>
             </div>
           </div>

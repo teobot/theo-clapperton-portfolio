@@ -1,5 +1,13 @@
 [
   {
+    "title": "Pharmacy2u Mobile App",
+    "desc": "I led a small team in developing the new Pharmacy2U app from the ground up. As an industry first, it empowers customers to manage their prescriptions and access a range of Pharmacy2U services directly. The app now serves over 400,000 users every month.",
+    "img": "p2u.png",
+    "live": "https://apps.apple.com/gb/app/pharmacy2u/id883158179",
+    "github": "",
+    "rating": 1
+  },
+  {
     "title": "Shark.Net",
     "desc": "This is a paid commission to build a web application for the Manchester Sharks Waterpolo team website. It includes a CMS for managing Users, Blogs, Contact Messages and page content.",
     "img": "shark.net-min.png",
@@ -11,12 +19,6 @@
     "desc": "Founder and lead developer for Vizit, a offline-first react native mobile app for James and John Timpson to review their stores.",
     "img": "vizit-compressed.png",
     "live": "https://apps.apple.com/gb/app/vizit-mobile/id6468265939",
-    "rating": 1
-  },
-  {
-    "title": "Rapidash",
-    "desc": "A project I created for sending instant messages to our thousands of branches. It uses a Node.Js server and a React.Js front end, including websocket connections for real time updates.",
-    "img": "rapidash-min.jpg",
     "rating": 1
   }
 ]

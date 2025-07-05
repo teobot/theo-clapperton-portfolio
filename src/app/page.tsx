@@ -62,8 +62,8 @@ export default function Home() {
                   className="w-full h-auto object-cover rounded-lg aspect-video"
                 />
               </div>
-              <div className="flex flex-col gap-2 mt-4">
-                <h1 className="text-4xl font-bold">
+              <div className="flex flex-col gap-1">
+                <h1 className="text-4xl font-bold mt-3">
                   {projects.heroProject.title}
                 </h1>
                 <p className="text-lg text-gray-500">

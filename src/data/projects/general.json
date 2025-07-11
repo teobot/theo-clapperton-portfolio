@@ -12,7 +12,9 @@
     "title": "Rapidash",
     "desc": "A project I created for sending instant messages to our thousands of branches. It uses a Node.Js server and a React.Js front end, including websocket connections for real time updates.",
     "img": "rapidash-min.jpg",
-    "rating": 1
+    "rating": 1,
+    "type": "Internal",
+    "date": "2025-05-01"
   },
   {
     "title": "Ponyta",
